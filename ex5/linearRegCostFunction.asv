@@ -22,10 +22,9 @@ J=J+regre;
 
 
 grad = zeros(size(theta));
-grad=delta'*X/m;
-grad=grad+lambda*theta'/m;
+s=sum(delta);
+x=X(:,2);
 
-grad(1)=sum(delta)/m;
 
 % ====================== YOUR CODE HERE ======================
 % Instructions: Compute the cost and gradient of regularized linear 
